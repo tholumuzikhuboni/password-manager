@@ -9,7 +9,7 @@
   <style>
     body {
       background-color: #f0f4f8;
-      margin-top: 56px; /* To prevent content from being hidden under the sticky navbar */
+      padding-top: 56px; /* Adjusted to account for the sticky navbar */
     }
 
     .hero {
@@ -44,8 +44,12 @@
     }
     
     /* Equal buttons in dropdown */
+    .dropdown-menu {
+      min-width: 200px; /* Set a minimum width to prevent stretching */
+    }
+
     .dropdown-menu .btn {
-      width: 100%; /* Make buttons equal width */
+      width: 100%; /* Ensure buttons don’t stretch unnecessarily */
       margin-bottom: 10px; /* Space between buttons */
     }
 
