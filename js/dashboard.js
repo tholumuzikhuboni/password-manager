@@ -15,3 +15,14 @@ updateDetailsBtn.addEventListener("click", () => {
   // Navigation to an update details
   window.location.href = "update-details.html";
 });
+
+import { auth } from "./firebase-config.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
+// Check if the user is logged in
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // If no user is logged in, redirect to login page
+    window.location.href = "login.html";
+  }
+});
