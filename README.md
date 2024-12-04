@@ -25,4 +25,9 @@ To run the project locally, follow these steps:
 2. Navigate to the project folder:
 ```bash
 cd password-manager
-3. Open ```bash index.html in your preferred browser.
+3. Open  index.html in your preferred browser.
+
+## How to Use
+- Visit the app in your browser.
+- Sign up or log in to your account.
+- Generate strong passwords, save them with corresponding website names, and manage your stored passwords.
