@@ -13,7 +13,7 @@
   <style>
     body {
       background-color: #f0f4f8;
-      margin-top: 56px; /* Add margin-top to account for the sticky navbar height */
+      padding-top: 56px; /* Adjust padding for the navbar */
     }
 
     .hero {
@@ -45,16 +45,18 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      width: 100%;
     }
 
-    /* Dropdown button width fix */
+    /* Dropdown menu styles */
     .dropdown-menu {
-      min-width: 220px; /* Give the dropdown a fixed minimum width */
+      min-width: 220px;
     }
 
     .dropdown-menu .btn {
-      width: 100%; /* Ensure both buttons are the same width */
-      margin: 5px 0; /* Add spacing between buttons */
+      width: 100%; /* Ensure buttons have equal width */
+      margin-bottom: 5px; /* Add space between buttons */
+      text-align: center; /* Center align the text */
     }
 
     footer {
