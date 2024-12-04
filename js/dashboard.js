@@ -1,18 +1,17 @@
-// Profile icon actions
-const profileIcon = document.getElementById("profileIcon");
+// Get references to buttons
+const logoutBtn = document.getElementById("logoutBtn");
+const updateDetailsBtn = document.getElementById("updateDetailsBtn");
 
-// Add click event to the profile icon
-profileIcon.addEventListener("click", () => {
-  const action = confirm("What would you like to do?\nPress OK to update details or Cancel to logout.");
-  if (action) {
-    // Redirect to update details page or show a modal
-    alert("Redirecting to update details...");
-    // Example: Navigate to an update details page
-    window.location.href = "update-details.html";
-  } else {
-    // Logout logic
-    alert("You have been logged out.");
-    // Example: Redirect to login page after logout
-    window.location.href = "login.html";
-  }
+// Logout functionality
+logoutBtn.addEventListener("click", () => {
+  alert("You have been logged out.");
+  // logout logic here
+  window.location.href = "login.html";
+});
+
+// Update details functionality
+updateDetailsBtn.addEventListener("click", () => {
+  alert("Redirecting to update details page.");
+  // avigation to an update details
+  window.location.href = "update-details.html";
 });
