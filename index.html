@@ -39,9 +39,52 @@
       min-width: 150px;
       margin: 5px;
     }
+
+    /* Sticky navbar styles */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    /* Dropdown menu styles */
+    .dropdown-menu {
+      min-width: 220px;
+    }
+
+    .dropdown-menu .btn {
+      width: 100%; /* Ensure buttons have equal width */
+      margin-bottom: 5px; /* Add space between buttons */
+      text-align: center; /* Center align the text */
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Password Manager</a>
+      <div class="dropdown ms-auto">
+        <button class="btn btn-dark" type="button" id="profileIcon" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user-circle" style="font-size: 1.5rem;"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileIcon">
+          <li><a class="btn btn-success" href="login.html">Login</a></li>
+          <li><a class="btn btn-primary" href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <div class="container-fluid hero">
