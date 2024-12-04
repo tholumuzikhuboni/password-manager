@@ -12,6 +12,6 @@ logoutBtn.addEventListener("click", () => {
 // Update details functionality
 updateDetailsBtn.addEventListener("click", () => {
   alert("Redirecting to update details page.");
-  // avigation to an update details
+  // Navigation to an update details
   window.location.href = "update-details.html";
 });
