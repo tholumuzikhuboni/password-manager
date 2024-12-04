@@ -147,14 +147,15 @@
   <script>
     // Firebase configuration
     const firebaseConfig = {
-  apiKey: "AIzaSyBCdzNSdeefMgwIA5zFGcndC6J1g28x_T8",
-  authDomain: "password-manager-9d4ff.firebaseapp.com",
-  projectId: "password-manager-9d4ff",
-  storageBucket: "password-manager-9d4ff.firebasestorage.app",
-  messagingSenderId: "791175094506",
-  appId: "1:791175094506:web:6753c3177e085dc722b793",
-  measurementId: "G-DT19HTDNGL"
-};
+    apiKey: "AIzaSyBCdzNSdeefMgwIA5zFGcndC6J1g28x_T8",
+    authDomain: "password-manager-9d4ff.firebaseapp.com",
+    projectId: "password-manager-9d4ff",
+    storageBucket: "password-manager-9d4ff.firebasestorage.app",
+    messagingSenderId: "791175094506",
+    appId: "1:791175094506:web:6753c3177e085dc722b793",
+    measurementId: "G-DT19HTDNGL"
+ };
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
@@ -181,6 +182,9 @@
 
         // Set the welcome message
         welcomeMessage.textContent = `${greeting}, ${email}`;
+      } else {
+        // If not logged in, redirect to login page
+        window.location.href = "login.html";
       }
     });
   </script>
