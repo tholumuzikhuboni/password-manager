@@ -1,23 +1,27 @@
+import { auth } from "./firebase-config.js";
+import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
 // Get references to buttons
 const logoutBtn = document.getElementById("logoutBtn");
 const updateDetailsBtn = document.getElementById("updateDetailsBtn");
 
 // Logout functionality
 logoutBtn.addEventListener("click", () => {
-  alert("You have been logged out.");
-  // logout logic here
-  window.location.href = "login.html";
+  signOut(auth)
+    .then(() => {
+      alert("You have been logged out.");
+      window.location.href = "login.html"; // Redirect to login page after logout
+    })
+    .catch((error) => {
+      alert(`Error logging out: ${error.message}`);
+    });
 });
 
 // Update details functionality
 updateDetailsBtn.addEventListener("click", () => {
   alert("Redirecting to update details page.");
-  // Navigation to an update details
   window.location.href = "update-details.html";
 });
-
-import { auth } from "./firebase-config.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
 // Check if the user is logged in
 onAuthStateChanged(auth, (user) => {
@@ -37,6 +41,7 @@ onAuthStateChanged(auth, (user) => {
       greeting = "Good afternoon";
     }
     
+    // Set the welcome message
     welcomeMessageDiv.innerHTML = `<h2>${greeting}, ${userEmail}!</h2>`;
   }
 });
