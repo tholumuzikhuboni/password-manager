@@ -24,5 +24,19 @@ onAuthStateChanged(auth, (user) => {
   if (!user) {
     // If no user is logged in, redirect to login page
     window.location.href = "login.html";
+  } else {
+    // User is logged in, display welcome message
+    const welcomeMessageDiv = document.getElementById("welcomeMessage");
+    const userEmail = user.email;
+    const currentHour = new Date().getHours();
+    
+    let greeting = "Good evening";
+    if (currentHour < 12) {
+      greeting = "Good morning";
+    } else if (currentHour < 18) {
+      greeting = "Good afternoon";
+    }
+    
+    welcomeMessageDiv.innerHTML = `<h2>${greeting}, ${userEmail}!</h2>`;
   }
 });
