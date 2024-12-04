@@ -2,6 +2,14 @@
 const logoutBtn = document.getElementById("logoutBtn");
 const updateDetailsBtn = document.getElementById("updateDetailsBtn");
 
+ // Check if user is authenticated
+    auth.onAuthStateChanged(user => {
+      if (!user) {
+        // Redirect to login page if user is not logged in
+        window.location.replace("login.html");
+      }
+    });
+
 // Logout functionality
 logoutBtn.addEventListener("click", () => {
   alert("You have been logged out.");
