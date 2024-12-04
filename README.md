@@ -23,5 +23,6 @@ To run the project locally, follow these steps:
    ```bash
    git clone https://github.com/tholumuzikhuboni/password-manager.git
 2. Navigate to the project folder:
+```bash
 cd password-manager
-3. Open index.html in your preferred browser.
+3. Open ```bash index.html in your preferred browser.
